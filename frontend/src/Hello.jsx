@@ -1,7 +1,7 @@
 function Hello(){
     return (
         <div>
-            <h1>Ainda vai levar um tempo {data.nome}</h1>
+            <h1>Ainda vai levar um tempo</h1>
         </div>
     )
 }
