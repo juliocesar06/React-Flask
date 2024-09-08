@@ -1,7 +1,8 @@
-function Hello(){
+function Hello({apiData}){
     return (
         <div>
-            <h1>Ainda vai levar um tempo</h1>
+            <h1 className="bg-gray-800 text-white">Ainda vai levar um tempo {apiData.salario}</h1>
+            <p className="text-red-500 bg-yellow-100">Hello</p>
         </div>
     )
 }
