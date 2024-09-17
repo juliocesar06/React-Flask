@@ -1,8 +1,15 @@
-import { useState,useEffect } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './index.css'
+import { useState,useEffect,React } from 'react'
+import { BrowserRouter as Router, Route, Routes, Link } from 'react-router-dom';
+
+
 import Hello from './Hello'
+import Intro from './intro'
+import Atualizar from './pages/Atualizar';
+import Historico from './pages/Historico';
+import Visualizar from './pages/Visualizar';
+
+
+
 
 function App() {
   const [data, setData] = useState('');
@@ -24,14 +31,20 @@ function App() {
     ,[]);
 
   return (
-    <>
+    <Router>
       <div>
- 
+          <Intro/>
           <Hello apiData={data} />
   
       </div>
+      <Routes>
+        <Route path='/' element={<Intro/>}/>
+        <Route path='/visualizar' element={<Visualizar/>}/>
+        <Route path='/atualizar' element={<Atualizar/>}/>
+        <Route path='/historico' element={<Historico/>}/>
+      </Routes>
       
-    </>
+    </Router>
   )
 }
 
